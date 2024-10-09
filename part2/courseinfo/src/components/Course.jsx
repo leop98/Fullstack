@@ -1,9 +1,10 @@
 const Header = (props) => {
-  return <h1>{props.name}</h1>
+  return <h2>{props.name}</h2>
 }
 
 const Total = (props) => {
-  return <p>Number of exercises {props.sumOfExercises}</p>
+  const sum = props.parts.reduce((total, item) => total + item.exercises, 0);
+  return <p><b>Total of {sum} exercises</b></p>
 }
 
 const Part = (props) => {
