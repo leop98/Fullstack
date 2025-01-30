@@ -124,6 +124,7 @@ const App = () => {
         setPersons(persons.concat(returnedPerson))
         setNewName('')
         setNewNumber('')
+        setMessageType('success')
         setMessage(
             `Added ${personObject.name}`
           )
@@ -131,6 +132,10 @@ const App = () => {
             setMessage(null)
           }, 5000)
       })
+      .catch((error) => {
+        setMessageType('error');
+        setMessage(`[error] ${error.response?.data?.error}`);
+      });
     }
   }
 
@@ -140,6 +145,7 @@ const App = () => {
       personService
       .deletePerson(id)
       setPersons(persons.filter(persons => persons.id !== id))
+      setMessageType('success')
       setMessage(
         `Deleted ${person.name}`
       )
