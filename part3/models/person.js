@@ -16,9 +16,9 @@ mongoose
   })
 
 const isValidPhoneNumber = (phoneNumber) => {
-  var pattern = /^\d{2,3}-\d+$/
-  return pattern.test(phoneNumber)
-}
+  const pattern = /^\d{2,3}-\d{5,}$/;
+  return phoneNumber.length >= 9 && pattern.test(phoneNumber);
+};
 
 const personSchema = new mongoose.Schema({
   name: {
