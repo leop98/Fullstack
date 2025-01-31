@@ -1,7 +1,0 @@
-POST   https://aged-night-7147.fly.dev/api/persons
-Content-Type: application/json
-
-{
-    "name": "Teemu Teekkari",
-    "number": "1234567890"
-}
