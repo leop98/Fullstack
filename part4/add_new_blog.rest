@@ -1,9 +1,10 @@
-POST   http://localhost:3003/api/blogs
+POST   http://localhost:3001/api/blogs
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RpYm90dGkiLCJpZCI6IjY3YjVlOGNiNDI3ZGNlMDFhZjdkNTYyYSIsImlhdCI6MTc0MDc0Mzk2NiwiZXhwIjoxNzQwNzQ3NTY2fQ.bXBDTptUZAmpITgbPbNVcRZLJ8bJW2m_3yVCFAQnkQU
 
 {
-    "title": "testi blogi",
-    "author": "testaaja",
-    "url": "sivu.com",
-    "likes": 123
+    "title": "blog test 4.20000000",
+    "author": "testaaja3",
+    "url": "sivu2.com",
+    "likes": 1234
 }
