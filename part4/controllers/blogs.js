@@ -36,7 +36,7 @@ blogsRouter.post('/', async (request, response, next) => {
       user: user._id,
     })
 
-    if(body.title === undefined || body.url === undefined){
+    if(!body.title || !body.url){
       response.status(400).end()
     }else{
       const savedBlog = await blog.save() 
